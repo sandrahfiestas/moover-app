@@ -34,8 +34,13 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
+  // modules: [
+  //   '@nuxtjs/style-resources'
+  // ],
+
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'bootstrap-vue/nuxt'
   ],
 
   styleResources: {
