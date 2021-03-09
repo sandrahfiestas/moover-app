@@ -1,12 +1,11 @@
 <template>
-  <div class="trancking-container">
-    <h2 class="text-center m-4 ">
-      Seguimiento
+  <div class="tracking-container">
+    <h2 class="text-center mt-5 mb-4">
+      Seguimiento de Envío
     </h2>
-    <!-- TRACKING -->
-    <div class="container px-1 px-md-4 py-5 mx-auto">
-      <div class="card mt-0 mb-0">
-        <!-- ENCABEZADO DE CARD -->
+    <!-- PROGRESS-BAR -->
+    <div class="container px-1 px-md-4 mt-3 pb-5 mx-auto">
+      <div class="card mt-0 mb-0 bg-light">
         <div class="col d-flex flex-column px-3 top">
           <div class="text-center font-weight-bold">
             <h3>N° de Orden: 07810</h3>
@@ -67,48 +66,50 @@
             </div>
           </div>
         </div>
+        <div class="container">
+          <b-table hover :items="items" class="mt-4 text-center" />
+        </div>
       </div>
     </div>
+    <!-- END-PROGRESS-BAR -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Tracking'
+  name: 'Tracking',
+  data () {
+    return {
+      items: [
+        { Fecha: '05/03/2021', Hora: '11:45', Actividad: 'Envío en tránsito' },
+        { Fecha: '05/03/2021', Hora: '11:30', Actividad: 'Envío recepcionado por el Moover' },
+        { Fecha: '05/03/2021', Hora: '11:10', Actividad: 'Moover en tránsito a recoger envío' },
+        { Fecha: '05/03/2021', Hora: '10:50', Actividad: 'Asignando conductor Moover' },
+        { Fecha: '05/03/2021', Hora: '10:30', Actividad: 'Registro de orden' }
+      ]
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 
-// .tracking-container {
-//   background-color: $primary-color;
-// }
-
-// .container {
-//   max-width: 100vh;
-//   border-style: solid;
-//   border-width: 1px;
-//   border-color: $primary-color;
-//   border-radius: 2rem;
-//   margin-bottom: 10rem;
-//   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.30);
-// }
-
-.trancking-container {
-background-color: $primary-color;
+.tracking-container {
+  h2 {
+    color: $primary-color;
+  }
 }
 
-// .card {
-
-// }
-// INICIO TRACKING
 .card {
     z-index: 0;
-    background-color: #ECEFF1;
     padding-bottom: 20px;
     margin-top: 90px;
     margin-bottom: 90px;
-    border-radius: 10px
+    border-style: solid;
+    border-width: 1px;
+    border-color: $primary-color;
+    border-radius: 2rem;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.30);
 }
 
 .top {
@@ -136,7 +137,7 @@ background-color: $primary-color;
 
 #progressbar .step0:before {
     content: "✔";
-    color: #fff
+    color: $white
 }
 
 #progressbar li:before {
@@ -215,5 +216,4 @@ background-color: $primary-color;
         width: 50%
     }
 }
-// FIN TRACKING
 </style>
