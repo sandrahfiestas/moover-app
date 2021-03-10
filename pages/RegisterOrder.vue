@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <h2 class="text-center m-4 ">
+    <h2 class="text-center mt-5 mb-4">
       Registrar Orden
     </h2>
     <div class="container bg-light">
@@ -189,9 +189,6 @@
           *Datos incorrectos, verifique por favor. Gracias
         </h6>
       </b-form>
-      <!-- <b-card class="mt-3" header="Form Data Result">
-        <pre class="m-0">{{ form }}</pre>
-      </b-card> -->
     </div>
   </div>
 </template>
@@ -223,7 +220,6 @@ export default {
     },
     onReset (event) {
       event.preventDefault()
-      // Reset our form values
       this.form.address = ''
       this.form.contact = ''
       this.form.phone = ''
@@ -233,7 +229,6 @@ export default {
       this.form.phoneDos = ''
       this.form.districtDos = null
       this.form.checked = []
-      // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
         this.show = true
@@ -246,7 +241,6 @@ export default {
 <style lang="scss" scoped>
 
 .form-container {
-  // background-color: $primary-color;
   h2, h5 {
     color: $primary-color
   }
@@ -271,7 +265,6 @@ export default {
 }
 
 .div-btns-register {
-  // background-color: peru;
   display: flex;
   justify-content: center;
   padding-top: 1rem;
