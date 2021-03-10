@@ -58,12 +58,18 @@
 </template>
 
 <script>
+
 export default {
   name: 'Home'
 }
 </script>
 
 <style lang="scss" scoped>
+
+// .div-slide{
+//  width: 100vh;
+// }
+
 .order-card {
     color: #fff;
 }
