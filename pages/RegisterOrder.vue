@@ -178,9 +178,17 @@
           />
         </b-form-group>
         <div class="div-btns-register">
-          <b-button type="submit" variant="primary">
+          <b-button v-b-modal.modal-1 type="submit" variant="primary">
             Confirmar Despacho
           </b-button>
+          <b-modal id="modal-1" title="¡REGISTRO EXITOSO!">
+            <p class="my-4">
+              Su numero de registro es:
+            </p>
+            <h1>
+              N° 07810
+            </h1>
+          </b-modal>
           <b-button type="reset" variant="danger">
             Cancelar
           </b-button>
