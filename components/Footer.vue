@@ -1,5 +1,5 @@
 <template>
-  <footer class="mt-5 pt-5 pb-2 footer">
+  <footer class="pt-5 pb-2 footer">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-xs-12 contact">
@@ -19,18 +19,10 @@
           <h4 class="mt-lg-0 mt-sm-4 mb-4">
             Síguenos
           </h4>
-          <nuxt-link to="/">
-            <img src="../assets/icons/linkedin_white.png" alt="LinkedIn">
-          </nuxt-link>
-          <nuxt-link to="/">
-            <img src="../assets/icons/facebook_white.png" alt="Facebook">
-          </nuxt-link>
-          <nuxt-link to="/">
-            <img src="../assets/icons/instagram_white.png" alt="Instagram">
-          </nuxt-link>
-          <nuxt-link to="/">
-            <img src="../assets/icons/twitter_white.png" alt="Twitter">
-          </nuxt-link>
+          <a href="https://www.linkedin.com/company/blooz/about/" target="_blank"><img src="../assets/icons/linkedin_white.png" alt="LinkedIn"></a>
+          <a href="https://web.facebook.com/Bloozperu" target="_blank"><img src="../assets/icons/facebook_white.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/bloozperu/" target="_blank"><img src="../assets/icons/instagram_white.png" alt="Instagram"></a>
+          <a href="https://www.blooz.pe/" target="_blank"><img src="../assets/icons/twitter_white.png" alt="Twitter"></a>
         </div>
       </div>
       <div class=" mt-5">
