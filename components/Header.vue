@@ -1,10 +1,10 @@
 <template>
   <header>
-    <b-navbar toggleable="md" type="" variant="light">
+    <b-navbar toggleable="md" variant="light" class="nav-bar">
       <b-container>
         <b-navbar-brand>
           <nuxt-link to="/">
-            <img class="logo" src="../assets/icons/logo.jpg" alt="logo">
+            <img class="logo-nav" src="../assets/icons/logo_nav.jpg" alt="logo">
           </nuxt-link>
         </b-navbar-brand>
 
@@ -14,7 +14,7 @@
           <b-navbar-nav>
             <b-nav-item>
               <nuxt-link to="/">
-                <p>Inicio</p>
+                Inicio
               </nuxt-link>
             </b-nav-item>
             <b-nav-item>
@@ -46,11 +46,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.logo {
+
+.nav-bar {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+
+  .nav-link {
+    text-align: center;
+      &:hover{
+        background: $primary-color;
+      }
+  }
+
+  // .navbar-toggler-icon {
+  //   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(65,184,131, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  // }
+}
+
+.logo-nav {
   width: 4rem;
 }
 
 .links {
   justify-content: flex-end;
+
 }
 </style>
