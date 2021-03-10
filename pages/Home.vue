@@ -54,6 +54,31 @@
         </div>
       </div>
     </div>
+    <h1 class="text-center pt-5 pb-2">
+      ¿Cómo funciona Moover?
+    </h1>
+    <div class="div-video">
+      <b-embed
+        type="iframe"
+        aspect="16by9"
+        src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fweb.facebook.com%2FBloozperu%2Fvideos%2F266019275002466%2F&show_text=false&width=560"
+        allowfullscreen
+      />
+    </div>
+    <h1 class="text-center mt-5 mb-4">
+      Protocolos de Atención
+    </h1>
+    <div class="div-protocol text-center p-5 mb-5">
+      <div>
+        <h3>
+          Conoce nuestro manual de medidas de seguridad
+          frente al Covid-19
+        </h3>
+      </div>
+      <div pt-3>
+        <img src="../assets/icons/mask_info.png" alt="Mascara facial">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -65,10 +90,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.div-video {
+  border-style: solid;
+  border-width: 1px;
+  border-color: $primary-color;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.30);
+}
 
-// .div-slide{
-//  width: 100vh;
-// }
+.div-protocol {
+ border-style: solid;
+ border-width: 1px;
+ color: $primary-color;
+ border-color: $primary-color;
+
+ h4 {
+   font-size: 1.1rem;
+   line-height : 25px;
+   font-weight: bold;
+ }
+}
 
 .order-card {
     color: #fff;
