@@ -18,7 +18,7 @@
               </nuxt-link>
             </b-nav-item>
             <b-nav-item>
-              <nuxt-link to="/tracking">
+              <nuxt-link v-b-modal.modal-2 to="/tracking">
                 Seguimiento
               </nuxt-link>
             </b-nav-item>
@@ -36,12 +36,33 @@
         </b-collapse>
       </b-container>
     </b-navbar>
+    <b-modal
+      id="modal-2"
+      title="Seguimiento de envío"
+      @ok="showTracking($event)"
+    >
+      <p class="mt-2">
+        Por favor, ingrese su numero de orden: {{ order }}
+      </p>
+      <input v-model="order" placeholder="N° de Orden">
+    </b-modal>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data () {
+    return {
+
+    }
+  },
+  methods: {
+    showTracking () {
+      // alert('click')
+    }
+  }
+
 }
 </script>
 

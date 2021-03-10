@@ -56,14 +56,6 @@
             required
           />
         </b-form-group>
-
-        <!-- <b-form-group id="input-group-4" v-slot="{ ariaDescribedby }">
-          <b-form-checkbox-group
-            id="checkboxes-4"
-            v-model="form.checked"
-            :aria-describedby="ariaDescribedby"
-          > -->
-
         <b-form-group id="input-group-4">
           <b-form-checkbox-group>
             <b-form-checkbox value="security">
@@ -72,12 +64,17 @@
           </b-form-checkbox-group>
         </b-form-group>
         <div class="text-center py-4">
-          <b-button class="btn-contact" type="submit" variant="primary">
+          <b-button class="btn-contact" type="submit" variant="primary" @click="modalShow = !modalShow">
             Enviar
           </b-button>
-          <!-- <b-button type="reset" variant="danger">
-            Cancelar
-          </b-button> -->
+          <b-modal v-model="modalShow">
+            <h3 class="text-center">
+              ✨¡Gracias!✨
+            </h3>
+            <h6 class="text-center">
+              Su formulario fue enviado con exito.
+            </h6>
+          </b-modal>
         </div>
       </b-form>
     </div>
@@ -89,6 +86,7 @@ export default {
   name: 'Contact',
   data () {
     return {
+      modalShow: false,
       form: {
         email: '',
         name: '',
@@ -107,13 +105,11 @@ export default {
     },
     onReset (event) {
       event.preventDefault()
-      // Reset our form values
       this.form.name = ''
       this.form.lastName = ''
       this.form.email = null
       this.form.phone = ''
       this.form.checked = []
-      // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
         this.show = true
